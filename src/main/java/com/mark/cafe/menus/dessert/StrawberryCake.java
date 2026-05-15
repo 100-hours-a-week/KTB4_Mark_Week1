@@ -1,0 +1,54 @@
+package com.mark.cafe.menus.dessert;
+
+import com.mark.cafe.menus.Dessert;
+import com.mark.cafe.recipes.DessertSteps;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class StrawberryCake extends Dessert {
+
+
+    public StrawberryCake(){
+        name = "딸기케이크";
+        price = 5000;
+        recipeSteps = new ArrayList<>(Arrays.asList(
+                DessertSteps.PREP.getDisplay(),
+                DessertSteps.MIX.getDisplay(),
+                DessertSteps.BAKE.getDisplay(),
+                DessertSteps.ADD_STRAWBERRY_CREAM.getDisplay(),
+                DessertSteps.STRAWBERRY_DECORATOR.getDisplay()
+        ));
+    }
+
+    @Override
+    public void addCream(){
+        System.out.println(DessertSteps.ADD_STRAWBERRY_CREAM);
+    }
+
+    @Override
+    public void decorator(){
+        System.out.println(DessertSteps.STRAWBERRY_DECORATOR);
+    }
+
+    @Override
+    public void excuteStep(int idx) {
+        switch(idx){
+            case 0:
+                prep();
+                break;
+            case 1:
+                mix();
+                break;
+            case 2:
+                bake();
+                break;
+            case 3:
+                addCream();
+                break;
+            case 4:
+                decorator();
+                break;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+package com.mark.cafe.menus.drink;
+
+import com.mark.cafe.menus.Drink;
+import com.mark.cafe.recipes.DrinkSteps;
+import com.mark.cafe.actions.ExtractShot;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Americano extends Drink implements ExtractShot {
+
+
+    public Americano(){
+        name = "아메리카노";
+        price = 3500;
+        recipeSteps = new ArrayList<>(Arrays.asList(
+                DrinkSteps.PREPARE_CUP.displayStep(),
+                DrinkSteps.ADD_WATER.displayStep(),
+                DrinkSteps.EXTRACT_SHOT.displayStep())) {
+        };
+    }
+
+    @Override
+    public void extractShot() {
+        System.out.println("샷 추가 했습니다");
+    }
+
+    @Override
+    public void excuteStep(int idx) {
+        switch(idx){
+            case 0:
+                prepareCup();
+                break;
+            case 1:
+                addWater();
+                break;
+            case 2:
+                extractShot();
+                break;
+        }
+    }
+
+}

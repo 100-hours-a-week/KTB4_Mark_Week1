@@ -1,0 +1,25 @@
+package com.mark.cafe.recipes;
+
+public enum DrinkSteps {
+    PREPARE_CUP("컵 준비하기"),
+    ADD_ICE("얼음 넣기"),
+    ADD_MILK("우유 넣기"),
+    ADD_WATER("물 넣기"),
+    EXTRACT_SHOT("에스프레소 추출 후 넣기"),
+    ICE_AMERICANO("아이스 아메리카노"),
+    AMERICANO("아메리카노"),
+    ICE_GREEN_TEA_LATTE("아이스 그린티라떼"),
+    GREEN_TEA_LATTE("그린티라떼"),
+    ADD_GREEN_TEA_POWDER("그린티 파우더 넣기");
+
+    private final String step;
+
+    DrinkSteps(String step){
+        this.step = step;
+    }
+
+    public String displayStep(){
+        return step;
+    }
+
+}
