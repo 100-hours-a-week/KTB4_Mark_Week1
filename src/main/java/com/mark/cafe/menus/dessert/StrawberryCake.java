@@ -23,12 +23,12 @@ public class StrawberryCake extends Dessert {
 
     @Override
     public void addCream(){
-        System.out.println(DessertSteps.ADD_STRAWBERRY_CREAM);
+        System.out.println(DessertSteps.ADD_STRAWBERRY_CREAM.getDisplay());
     }
 
     @Override
     public void decorator(){
-        System.out.println(DessertSteps.STRAWBERRY_DECORATOR);
+        System.out.println(DessertSteps.STRAWBERRY_DECORATOR.getDisplay());
     }
 
     @Override

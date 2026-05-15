@@ -22,12 +22,12 @@ public class ChocoCake extends Dessert {
 
     @Override
     public void addCream(){
-        System.out.println(DessertSteps.ADD_CHOCO_CREAM);
+        System.out.println(DessertSteps.ADD_CHOCO_CREAM.getDisplay());
     }
 
     @Override
     public void decorator(){
-        System.out.println(DessertSteps.CHOCO_DECORATOR);
+        System.out.println(DessertSteps.CHOCO_DECORATOR.getDisplay());
     }
 
     @Override
