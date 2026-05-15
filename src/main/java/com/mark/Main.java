@@ -81,6 +81,7 @@ public class Main {
                 } catch (InputMismatchException e){
                     System.out.println("잘못된 행동을 했습니다 돈을 잃습니다");
                     player.loseMoney(menu.getPrice());
+                    sc.nextLine();
                     break;
                 }
 
