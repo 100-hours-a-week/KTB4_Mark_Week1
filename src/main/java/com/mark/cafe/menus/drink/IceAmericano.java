@@ -11,14 +11,13 @@ public class IceAmericano extends Drink implements ExtractShot {
 
 
     public IceAmericano(){
-        name = DrinkSteps.ICE_AMERICANO.getStep();
-        price = 4000;
-        recipeSteps = new ArrayList<>(Arrays.asList(
-                DrinkSteps.PREPARE_CUP,
-                DrinkSteps.ADD_ICE,
-                DrinkSteps.ADD_WATER,
-                DrinkSteps.EXTRACT_SHOT)) {
-        };
+        super(DrinkSteps.ICE_AMERICANO.getStep(),
+                4000,
+                new ArrayList<>(Arrays.asList(
+                        DrinkSteps.PREPARE_CUP,
+                        DrinkSteps.ADD_ICE,
+                        DrinkSteps.ADD_WATER,
+                        DrinkSteps.EXTRACT_SHOT)));
     }
 
     @Override

@@ -10,15 +10,16 @@ public class StrawberryCake extends Dessert {
 
 
     public StrawberryCake(){
-        name = "딸기케이크";
-        price = 5000;
-        recipeSteps = new ArrayList<>(Arrays.asList(
-                DessertSteps.PREP,
-                DessertSteps.MIX,
-                DessertSteps.BAKE,
-                DessertSteps.ADD_STRAWBERRY_CREAM,
-                DessertSteps.STRAWBERRY_DECORATOR
-        ));
+
+        super(DessertSteps.STRAWBERRY_DECORATOR.getStep(),
+                5000,
+                new ArrayList<>(Arrays.asList(
+                        DessertSteps.PREP,
+                        DessertSteps.MIX,
+                        DessertSteps.BAKE,
+                        DessertSteps.ADD_STRAWBERRY_CREAM,
+                        DessertSteps.STRAWBERRY_DECORATOR
+                )));
     }
 
     @Override

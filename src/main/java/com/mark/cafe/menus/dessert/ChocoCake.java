@@ -9,15 +9,14 @@ import java.util.Arrays;
 public class ChocoCake extends Dessert {
 
     public ChocoCake(){
-        name = "초코케이크";
-        price = 5000;
-        recipeSteps = new ArrayList<>(Arrays.asList(
-                DessertSteps.PREP,
-                DessertSteps.MIX,
-                DessertSteps.BAKE,
-                DessertSteps.ADD_CHOCO_CREAM,
-                DessertSteps.CHOCO_DECORATOR
-        ));
+        super(DessertSteps.CHOCO_CAKE.getStep(),
+                5000,
+                new ArrayList<>(Arrays.asList(
+                        DessertSteps.PREP,
+                        DessertSteps.MIX,
+                        DessertSteps.BAKE,
+                        DessertSteps.ADD_CHOCO_CREAM,
+                        DessertSteps.CHOCO_DECORATOR)));
     }
 
     @Override

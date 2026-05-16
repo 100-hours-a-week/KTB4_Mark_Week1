@@ -11,14 +11,13 @@ public class GreenTeaLatte extends Drink implements AddGreenTeaPowder {
 
 
     public GreenTeaLatte(){
-        name = DrinkSteps.GREEN_TEA_LATTE.getStep();
-        price = 4000;
-        recipeSteps = new ArrayList<>(Arrays.asList(
-                DrinkSteps.PREPARE_CUP,
-                DrinkSteps.ADD_MILK,
-                DrinkSteps.ADD_GREEN_TEA_POWDER
-                )) {
-        };
+        super( DrinkSteps.GREEN_TEA_LATTE.getStep(),
+                4000,
+                new ArrayList<>(Arrays.asList(
+                        DrinkSteps.PREPARE_CUP,
+                        DrinkSteps.ADD_MILK,
+                        DrinkSteps.ADD_GREEN_TEA_POWDER
+                )));
     }
 
 
