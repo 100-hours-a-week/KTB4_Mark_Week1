@@ -14,10 +14,10 @@ public class IceAmericano extends Drink implements ExtractShot {
         name = "아이스 아메리카노";
         price = 4000;
         recipeSteps = new ArrayList<>(Arrays.asList(
-                DrinkSteps.PREPARE_CUP.displayStep(),
-                DrinkSteps.ADD_ICE.displayStep(),
-                DrinkSteps.ADD_WATER.displayStep(),
-                DrinkSteps.EXTRACT_SHOT.displayStep())) {
+                DrinkSteps.PREPARE_CUP,
+                DrinkSteps.ADD_ICE,
+                DrinkSteps.ADD_WATER,
+                DrinkSteps.EXTRACT_SHOT)) {
         };
     }
 

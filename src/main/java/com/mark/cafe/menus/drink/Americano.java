@@ -1,5 +1,6 @@
 package com.mark.cafe.menus.drink;
 
+import com.mark.cafe.actions.Recipes;
 import com.mark.cafe.menus.Drink;
 import com.mark.cafe.recipes.DrinkSteps;
 import com.mark.cafe.actions.ExtractShot;
@@ -13,11 +14,7 @@ public class Americano extends Drink implements ExtractShot {
     public Americano(){
         name = "아메리카노";
         price = 3500;
-        recipeSteps = new ArrayList<>(Arrays.asList(
-                DrinkSteps.PREPARE_CUP.displayStep(),
-                DrinkSteps.ADD_WATER.displayStep(),
-                DrinkSteps.EXTRACT_SHOT.displayStep())) {
-        };
+        recipeSteps = Arrays.asList(DrinkSteps.values());
     }
 
     @Override

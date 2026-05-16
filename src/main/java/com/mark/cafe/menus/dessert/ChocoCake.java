@@ -12,22 +12,22 @@ public class ChocoCake extends Dessert {
         name = "초코케이크";
         price = 5000;
         recipeSteps = new ArrayList<>(Arrays.asList(
-                DessertSteps.PREP.getDisplay(),
-                DessertSteps.MIX.getDisplay(),
-                DessertSteps.BAKE.getDisplay(),
-                DessertSteps.ADD_CHOCO_CREAM.getDisplay(),
-                DessertSteps.CHOCO_DECORATOR.getDisplay()
+                DessertSteps.PREP,
+                DessertSteps.MIX,
+                DessertSteps.BAKE,
+                DessertSteps.ADD_CHOCO_CREAM,
+                DessertSteps.CHOCO_DECORATOR
         ));
     }
 
     @Override
     public void addCream(){
-        System.out.println(DessertSteps.ADD_CHOCO_CREAM.getDisplay());
+        System.out.println(DessertSteps.ADD_CHOCO_CREAM.getStep());
     }
 
     @Override
     public void decorator(){
-        System.out.println(DessertSteps.CHOCO_DECORATOR.getDisplay());
+        System.out.println(DessertSteps.CHOCO_DECORATOR.getStep());
     }
 
     @Override

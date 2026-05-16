@@ -13,22 +13,22 @@ public class StrawberryCake extends Dessert {
         name = "딸기케이크";
         price = 5000;
         recipeSteps = new ArrayList<>(Arrays.asList(
-                DessertSteps.PREP.getDisplay(),
-                DessertSteps.MIX.getDisplay(),
-                DessertSteps.BAKE.getDisplay(),
-                DessertSteps.ADD_STRAWBERRY_CREAM.getDisplay(),
-                DessertSteps.STRAWBERRY_DECORATOR.getDisplay()
+                DessertSteps.PREP,
+                DessertSteps.MIX,
+                DessertSteps.BAKE,
+                DessertSteps.ADD_STRAWBERRY_CREAM,
+                DessertSteps.STRAWBERRY_DECORATOR
         ));
     }
 
     @Override
     public void addCream(){
-        System.out.println(DessertSteps.ADD_STRAWBERRY_CREAM.getDisplay());
+        System.out.println(DessertSteps.ADD_STRAWBERRY_CREAM.getStep());
     }
 
     @Override
     public void decorator(){
-        System.out.println(DessertSteps.STRAWBERRY_DECORATOR.getDisplay());
+        System.out.println(DessertSteps.STRAWBERRY_DECORATOR.getStep());
     }
 
     @Override

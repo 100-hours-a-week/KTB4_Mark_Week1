@@ -1,23 +1,26 @@
 package com.mark.cafe.menus;
 
+import com.mark.cafe.actions.Recipes;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class MenuItem {
     protected String name;
     protected int price;
-    protected ArrayList<String> recipeSteps;
+    protected List<Recipes> recipeSteps;
 
     public void showRecipe(){
-        for(String step : recipeSteps){
-            System.out.println(step);
+        for(Recipes step : recipeSteps){
+            System.out.println(step.getStep());
         }
     }
-    public ArrayList<String> getRecipeSteps(){
+    public List<Recipes> getRecipeSteps(){
         return recipeSteps;
     }
 
-    public boolean checkSteps(String choice, int idx){
-        if(recipeSteps.get(idx).equals(choice)) {
+    public boolean checkSteps(Recipes choice, int idx){
+        if(recipeSteps.get(idx) == choice) {
             return true;
         } else{
             return false;

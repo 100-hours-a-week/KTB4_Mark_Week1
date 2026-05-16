@@ -1,6 +1,8 @@
 package com.mark.cafe.recipes;
 
-public enum DrinkSteps {
+import com.mark.cafe.actions.Recipes;
+
+public enum DrinkSteps implements Recipes {
     PREPARE_CUP("컵 준비하기"),
     ADD_ICE("얼음 넣기"),
     ADD_MILK("우유 넣기"),
@@ -18,7 +20,7 @@ public enum DrinkSteps {
         this.step = step;
     }
 
-    public String displayStep(){
+    public String getStep(){
         return step;
     }
 

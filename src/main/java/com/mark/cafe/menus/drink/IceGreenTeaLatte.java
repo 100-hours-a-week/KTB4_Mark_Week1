@@ -14,10 +14,10 @@ public class IceGreenTeaLatte extends Drink implements AddGreenTeaPowder {
         name = "그린티 라떼";
         price = 4000;
         recipeSteps = new ArrayList<>(Arrays.asList(
-                DrinkSteps.PREPARE_CUP.displayStep(),
-                DrinkSteps.ADD_ICE.displayStep(),
-                DrinkSteps.ADD_MILK.displayStep(),
-                DrinkSteps.ADD_GREEN_TEA_POWDER.displayStep()
+                DrinkSteps.PREPARE_CUP,
+                DrinkSteps.ADD_ICE,
+                DrinkSteps.ADD_MILK,
+                DrinkSteps.ADD_GREEN_TEA_POWDER
                 )) {
         };
     }

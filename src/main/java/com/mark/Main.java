@@ -1,6 +1,7 @@
 package com.mark;
 
 
+import com.mark.cafe.actions.Recipes;
 import com.mark.cafe.menus.MenuItem;
 import com.mark.cafe.menus.dessert.ChocoCake;
 import com.mark.cafe.menus.dessert.StrawberryCake;
@@ -31,7 +32,7 @@ public class Main {
                 new IceAmericano(),
                 new Americano(),
                 new GreenTeaLatte(),
-                new IceGreenTeaLatte(),
+                new IceGreenTeaLatte(), 
                 new ChocoCake(),
                 new StrawberryCake()
         };
@@ -61,15 +62,15 @@ public class Main {
 
             // 각 메뉴의 레시피 크기만큼의 선택지 주어지게 함 레시피 크기 이상의 반복문일때 조건이 참이 될수가 없기 때문에
             for(int i = 0; i < menu.getRecipeSteps().size(); i++){
-                System.out.println("제조 방식을 레시피 순서대로 골라주세요");
+                System.out.println("제조 방식을 올바른 레시피 순서대로 골라주세요");
 
                 // Collections.shuffle은 리스트 원본 자체를 섞으므로 값을 새로운 리스트 객체에 할당해서 셔플
                 // 각 메뉴의 올바른 제조 순서는 바뀌지 않아야 하기 때문
-                ArrayList<String> shuffleRecipe = new ArrayList<String>(menu.getRecipeSteps());
+                ArrayList<Recipes> shuffleRecipe = new ArrayList<Recipes>(menu.getRecipeSteps());
                 Collections.shuffle(shuffleRecipe);
 
                 for(int j = 0; j < menu.getRecipeSteps().size(); j++){
-                    System.out.println(j + " : " + shuffleRecipe.get(j));
+                    System.out.println(j + " : " + shuffleRecipe.get(j).getStep());
                 }
 
                 System.out.println("선택지를 골라주세요");

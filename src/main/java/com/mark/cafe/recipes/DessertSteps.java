@@ -1,6 +1,8 @@
 package com.mark.cafe.recipes;
 
-public enum DessertSteps {
+import com.mark.cafe.actions.Recipes;
+
+public enum DessertSteps implements Recipes {
     BAKE("오븐에 굽기"),
     PREP("재료 준비하기"),
     MIX("재료 섞기"),
@@ -15,8 +17,10 @@ public enum DessertSteps {
         this.step = step;
     }
 
-    public String getDisplay(){
+    @Override
+    public String getStep(){
         return step;
     }
+
 
 }
