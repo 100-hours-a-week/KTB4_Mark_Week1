@@ -32,10 +32,12 @@ public class Main {
                 new IceAmericano(),
                 new Americano(),
                 new GreenTeaLatte(),
-                new IceGreenTeaLatte(), 
+                new IceGreenTeaLatte(),
                 new ChocoCake(),
                 new StrawberryCake()
         };
+
+        menuItems[0].showRecipe();
 
         player.checkResult();
 

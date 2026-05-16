@@ -14,7 +14,10 @@ public class Americano extends Drink implements ExtractShot {
     public Americano(){
         name = "아메리카노";
         price = 3500;
-        recipeSteps = Arrays.asList(DrinkSteps.values());
+        recipeSteps = Arrays.asList(
+                DrinkSteps.PREPARE_CUP,
+                DrinkSteps.ADD_WATER,
+                DrinkSteps.EXTRACT_SHOT);
     }
 
     @Override
