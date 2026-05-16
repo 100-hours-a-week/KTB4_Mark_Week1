@@ -37,7 +37,6 @@ public class Main {
                 new StrawberryCake()
         };
 
-        menuItems[0].showRecipe();
 
         player.checkResult();
 
@@ -68,7 +67,7 @@ public class Main {
 
                 // Collections.shuffle은 리스트 원본 자체를 섞으므로 값을 새로운 리스트 객체에 할당해서 셔플
                 // 각 메뉴의 올바른 제조 순서는 바뀌지 않아야 하기 때문
-                ArrayList<Recipes> shuffleRecipe = new ArrayList<Recipes>(menu.getRecipeSteps());
+                List<Recipes> shuffleRecipe = new ArrayList<Recipes>(menu.getRecipeSteps());
                 Collections.shuffle(shuffleRecipe);
 
                 for(int j = 0; j < menu.getRecipeSteps().size(); j++){

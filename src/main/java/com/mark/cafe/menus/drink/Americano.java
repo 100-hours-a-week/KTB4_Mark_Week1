@@ -12,7 +12,7 @@ public class Americano extends Drink implements ExtractShot {
 
 
     public Americano(){
-        name = "아메리카노";
+        name = DrinkSteps.AMERICANO.getStep();
         price = 3500;
         recipeSteps = Arrays.asList(
                 DrinkSteps.PREPARE_CUP,
